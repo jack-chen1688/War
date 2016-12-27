@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="War" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="TMs-Ji-usz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="a6S-hg-Is6">
+                                <rect key="frame" x="20" y="20" width="374" height="716"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="UiK-Ch-JMk">
+                                        <rect key="frame" x="126" y="0.0" width="122" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="UiK-Ch-JMk" secondAttribute="height" multiplier="122:67" id="Mpd-X1-lCs"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="8fA-2t-AlE" userLabel="CardStackView">
+                                        <rect key="frame" x="47" y="97" width="280" height="170"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="qPO-F0-kMp" userLabel="LeftCard">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="qPO-F0-kMp" secondAttribute="height" multiplier="120:170" id="nkb-43-mT1"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="8jQ-Qg-iC7" userLabel="RightCard">
+                                                <rect key="frame" x="160" y="0.0" width="120" height="170"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="8jQ-Qg-iC7" secondAttribute="height" multiplier="120:170" id="dmX-8X-64m"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgA-8Q-aXE">
+                                        <rect key="frame" x="146.66666666666666" y="297" width="81" height="31"/>
+                                        <state key="normal" image="dealbutton"/>
+                                        <connections>
+                                            <action selector="dealTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VYC-WV-X2d"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="95g-tu-TCH" userLabel="ScoreLabelStackView">
+                                        <rect key="frame" x="81.666666666666686" y="358" width="210.66666666666663" height="358"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5az-OR-ZRp" userLabel="LeftScoreLabelStackView">
+                                                <rect key="frame" x="0.0" y="0.0" width="55.333333333333329" height="72"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYh-E4-fkh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="55.333333333333329" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZw-lZ-pls" userLabel="LeftScoreLabel">
+                                                        <rect key="frame" x="15.333333333333329" y="24" width="24.666666666666657" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CSR-a7-bhj" userLabel="RightScoreLabelStackView">
+                                                <rect key="frame" x="155.33333333333331" y="0.0" width="55.333333333333314" height="72"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPC-rj-bXn">
+                                                        <rect key="frame" x="7.3333333333333144" y="0.0" width="40.666666666666686" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hK-3k-iXn" userLabel="RightScoreLabel">
+                                                        <rect key="frame" x="15.333333333333314" y="24" width="24.666666666666686" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a6S-hg-Is6" secondAttribute="bottom" id="35O-nL-TcW"/>
+                            <constraint firstAttribute="bottom" secondItem="TMs-Ji-usz" secondAttribute="bottom" id="5Qo-1s-2TA"/>
+                            <constraint firstAttribute="trailing" secondItem="TMs-Ji-usz" secondAttribute="trailing" id="AcA-ku-7nh"/>
+                            <constraint firstItem="TMs-Ji-usz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MLj-pM-Etn"/>
+                            <constraint firstItem="a6S-hg-Is6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NbQ-SR-xnl"/>
+                            <constraint firstItem="TMs-Ji-usz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TXw-2K-9qB"/>
+                            <constraint firstItem="a6S-hg-Is6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oMR-fI-rtw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a6S-hg-Is6" secondAttribute="trailing" id="v05-FM-Bjh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leftImageView" destination="qPO-F0-kMp" id="c3k-CC-eCr"/>
+                        <outlet property="leftScoreLabel" destination="XZw-lZ-pls" id="oFI-6b-7mM"/>
+                        <outlet property="rightImageView" destination="8jQ-Qg-iC7" id="Ane-0x-mVo"/>
+                        <outlet property="rightScoreLabel" destination="8hK-3k-iXn" id="sfn-6X-h0e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="120" height="170"/>
+        <image name="background" width="666" height="621"/>
+        <image name="dealbutton" width="81" height="31"/>
+        <image name="logo" width="122" height="67"/>
+    </resources>
+</document>
